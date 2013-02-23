@@ -24,16 +24,15 @@ public class Dvoracek_Asgn_01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        // assign variables
+        // assign variables testing 43 GIT
      int x=2;
      double random1,exp1, random2, exp2;
      //double random2= (8x^2-9)/9;
      
-     random
+     random1= 2*(Math.pow(x,2)/6);
      
-     //assign exmponent calculations
-        exp1 = 2*(Math.pow(4,2));
+   
      
-     System.out.println ("this is the value of random1 "+exp1);
+     System.out.println ("this is the value of random1 "+random1);
     }
 }
