@@ -22,16 +22,17 @@ public class Dvoracek_Asgn_01 {
     public static void main(String[] args) {
     // TODO code application logic here
     // assign variables 
-     int n,x,nx, r1score, r2score, beginx, lastx, arraysize;
+     int n,x,nx,arraycount, r1score, r2score, beginx, lastx, arraysize;
      String testset1, testset2, t1,r1, r2;
      double target,random1,random2,test1,test2 ;
      
      //initialize variables
      r1score=0;
      r2score=0;
-     x=-25;
-     nx=25;
+     x=-5;
+     nx=5;
      beginx=x;
+     arraycount=0;
      t1="Y=(5x^2-5)/4";
      r1="Y=(2x^2+2)/6";
      r2="Y=(8x^2-9)/9";
@@ -40,7 +41,9 @@ public class Dvoracek_Asgn_01 {
      //JOptionPane.showMessageDialog (null,"Array size = "+(arraysize));
      //name output arrays
     String [] TestSetOutput1 = new String[arraysize]; 
-    String [] TestSetOutput2 = new String[arraysize];  
+    String [] TestSetOutput2 = new String[arraysize];
+    String [] FinalOutput1= new String[arraysize];
+    String [] FinalOutput2= new String[arraysize];
   
      //DecimalFormat fmt= new DecimalFormat ("0.###"); 
      //Loop statement to test values.
@@ -81,20 +84,24 @@ public class Dvoracek_Asgn_01 {
      */
      
  
-     //Capturing Test Set Data 
-     
+    //Capturing Test Set Data
     
-    
-    //Test output of data sets
-    
+    //Testing Data Set
     //System.out.print("Random 1: X"+(x+1)+"="+x+" ,Y"+x+"="+random1);
+    
+    TestSetOutput1[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+random1;
+    TestSetOutput2[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+random2;
+    
+    FinalOutput1[arraycount]=x+", "+random1;
+    FinalOutput2[arraycount]=x+", "+random2;
+    
+    
+    
+    arraycount++;
     x++;
-    //System.out.print ("\n"); 
-   
-     
      
      }
-     //Winner declaration.
+     //Final Output for copy and paste
      if (r1score>r2score) {    
         System.out.println ("Target fuction "+t1); 
         System.out.println("Random 1 ("+r1+")score="+r1score);
@@ -111,6 +118,21 @@ public class Dvoracek_Asgn_01 {
         JOptionPane.showMessageDialog (null,"X was tested from "+beginx+" to "+nx+".\nRandom 2 "+r2+" wins "+r2score+" to "+r1score+".\nIt is closer to the target function of \n"+t1);
             }
     
-     System.out.println ("The End");
+    System.out.println("\nTest set for Random 1 "+r1+":\n");
+     
+    for (int fnl1=0; fnl1 < arraysize; fnl1++)
+    { 
+        System.out.println (FinalOutput1[fnl1]);
+        //verify output data System.out.println (TestSetOutput1[fnl1]);
+    }
+    System.out.println("\n\nTest set for Random 2 "+r2+":\n"); 
+    
+    for (int fnl2=0; fnl2 < arraysize; fnl2++)
+    { 
+        System.out.println (FinalOutput2[fnl2]);
+        System.out.println (TestSetOutput1[fnl2]);
+    }
+    
+    System.out.println ("The End");
     }
 }
