@@ -111,7 +111,7 @@ public class Dvoracek_Asgn_01 {
      }
      //Final Output for copy and paste
      if (r1score>r2score) {    
-        System.out.println ("Target fuction "+t1); 
+        System.out.println ("Target function "+t1); 
         System.out.println("Random 1 ("+r1+")score="+r1score);
         System.out.println("Random 2 ("+r2+")score="+r2score);
         System.out.println("X was tested from "+beginx+" to "+nx);
@@ -119,7 +119,7 @@ public class Dvoracek_Asgn_01 {
         
             }
      else {
-        System.out.println ("Target fuction "+t1); 
+        System.out.println ("Target function "+t1); 
         System.out.println("Random 1 ("+r1+")score="+r1score);
         System.out.println("Random 2 ("+r2+")score="+r2score);
         System.out.println("X was tested from "+beginx+" to "+nx);
@@ -133,14 +133,14 @@ public class Dvoracek_Asgn_01 {
         System.out.println (FinalOutputTF[tf]);
         //verify out put data System.out.println (TestSetOutputTF[tf]);
     } 
-     System.out.println("\nTest set for Random 1 "+r1+":\n");
+     System.out.println("\nTraining set for Random 1 "+r1+":\n");
     
     for (int fnl1=0; fnl1 < arraysize; fnl1++)
     { 
         System.out.println (FinalOutput1[fnl1]);
         //verify output data System.out.println (TestSetOutput1[fnl1]);
     }
-    System.out.println("\n\nTest set for Random 2 "+r2+":\n"); 
+    System.out.println("\n\nTraining set for Random 2 "+r2+":\n"); 
     
     for (int fnl2=0; fnl2 < arraysize; fnl2++)
     { 
