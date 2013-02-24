@@ -29,8 +29,8 @@ public class Dvoracek_Asgn_01 {
      //initialize variables
      r1score=0;
      r2score=0;
-     x=-5;
-     nx=5;
+     x=-25;
+     nx=25;
      beginx=x;
      arraycount=0;
      t1="Y=(5x^2-5)/4";
@@ -38,14 +38,20 @@ public class Dvoracek_Asgn_01 {
      r2="Y=(8x^2-9)/9";
      arraysize=(Math.abs (beginx-nx))+1;
      
-     //JOptionPane.showMessageDialog (null,"Array size = "+(arraysize));
-     //name output arrays
-    String [] TestSetOutput1 = new String[arraysize]; 
-    String [] TestSetOutput2 = new String[arraysize];
+     /**Test arraysize
+     * JOptionPane.showMessageDialog (null,"Array size = "+(arraysize));
+     * name output arrays
+     * */
+    
+     //String [] TestSetOutput1 = new String[arraysize]; 
+     //String [] TestSetOutput2 = new String[arraysize];
+     //String [] TestSetOutputTF= new String [arraysize];
+    
+    String [] FinalOutputTF = new String [arraysize];
     String [] FinalOutput1= new String[arraysize];
     String [] FinalOutput2= new String[arraysize];
   
-     //DecimalFormat fmt= new DecimalFormat ("0.###"); 
+     
      //Loop statement to test values.
      
      while (x<=nx)
@@ -89,9 +95,11 @@ public class Dvoracek_Asgn_01 {
     //Testing Data Set
     //System.out.print("Random 1: X"+(x+1)+"="+x+" ,Y"+x+"="+random1);
     
-    TestSetOutput1[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+random1;
-    TestSetOutput2[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+random2;
+    //TestSetOutputTF[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+target;
+    //TestSetOutput1[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+random1;
+    //TestSetOutput2[arraycount]="X"+(arraycount+1)+"="+x+" ,Y"+(arraycount+1)+"="+random2;
     
+    FinalOutputTF[arraycount]=x+", "+target;
     FinalOutput1[arraycount]=x+", "+random1;
     FinalOutput2[arraycount]=x+", "+random2;
     
@@ -118,8 +126,15 @@ public class Dvoracek_Asgn_01 {
         JOptionPane.showMessageDialog (null,"X was tested from "+beginx+" to "+nx+".\nRandom 2 "+r2+" wins "+r2score+" to "+r1score+".\nIt is closer to the target function of \n"+t1);
             }
     
-    System.out.println("\nTest set for Random 1 "+r1+":\n");
-     
+     System.out.println ("\nTarget function "+t1+" response to test set.\n");
+    
+       for (int tf=0; tf < arraysize; tf++)
+    { 
+        System.out.println (FinalOutputTF[tf]);
+        //verify out put data System.out.println (TestSetOutputTF[tf]);
+    } 
+     System.out.println("\nTest set for Random 1 "+r1+":\n");
+    
     for (int fnl1=0; fnl1 < arraysize; fnl1++)
     { 
         System.out.println (FinalOutput1[fnl1]);
@@ -130,7 +145,7 @@ public class Dvoracek_Asgn_01 {
     for (int fnl2=0; fnl2 < arraysize; fnl2++)
     { 
         System.out.println (FinalOutput2[fnl2]);
-        System.out.println (TestSetOutput1[fnl2]);
+        //verify output data System.out.println (TestSetOutput2[fnl2]);
     }
     
     System.out.println ("The End");
